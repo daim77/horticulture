@@ -11,25 +11,27 @@ seznam_cinnosti = {
     ),
     3: (
         'provazek', 'sprej', 'palice', 'metr', 'pasmo', 'roxor', 'kolecko_kovove', 'vodovaha_velka', 'vodovaha_mala',
-        'ryc', 'krumpac', 'nuz', 'strom', 'nahradni_kul', 'lopata_srdcovka', 'hrabe_svedske', 'hrabe_kovove', 'koste'
+        'ryc', 'krumpac', 'nuz', 'strom', 'nahradni_kul', 'lopata_srdcovka', 'hrabe_svedske', 'hrabe_kovove',
+        'koste', 'hladitko'
     ),
     4: (
-        'stavba_zdi', 0
+        'gumova_palicka', 'pasmo', 'roxor', 'sprej', 'palice', 'vodovaha_mala', 'vodovaha_velka',
+        'hrabe_svedske', 'hrabe_kovove', 'krumpac', 'ryc', 'lopata_srdcovka'
     ),
     5: (
-        'valec', 'hrabe_kovove', 'hrabe_svedske', 'kolecko_kovove', 'semeno', 'pasmo', 'sprej'
+        'valec', 'hrabe_kovove', 'hrabe_svedske', 'kolecko_kovove', 'semeno', 'pasmo', 'sprej', 'hladitko'
     ),
     6: (
-        'koseni_travniku', 0
+        'sekacka', 'kolecko_plastove', 'hrabe_svedske'
     ),
     7: (
-        'udrzba_zahonu', 0
+        'nuzky', 'kolecko_kovove', 'hrabe_kovove', 'ryc', 'hnojivo'
     ),
     8: (
-        'strihani_stromu', 0
+        'nuzky', 'zebrik', 'hrabe_kovove'
     ),
     9: (
-        'mulcovani', 'klecko_plastove', 'hrabe_kovove', 'lopata_normalni', 'hrabe_svedske', 'koste'
+        'klecko_plastove', 'hrabe_kovove', 'lopata_normalni', 'hrabe_svedske', 'koste'
     )
 }
 kompletni_seznam = set()
