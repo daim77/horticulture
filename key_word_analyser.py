@@ -46,5 +46,8 @@ pp(word_count)
 pp(numerosity_count)
 pp(numerosity_count.keys())
 pp(len(TEXTS.split()))
+
+# look line 18 for add filter len words
 pp(len(text_list))
+
 pp(list(list_of_www_keyw_result))
