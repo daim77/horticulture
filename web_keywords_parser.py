@@ -47,22 +47,11 @@ def find_em(file_name, soup):
     return
 
 
-def find_alt_img(soup):
-    pass
-
-
-def find_keywords(file_name, soup):
-    try:
-        meta_result = soup.find(attrs={'name': 'keywords'})
-        result = list(meta_result['content'])
-        txt_writer(file_name, result)
-    except:
-        return
+def find_div(file_name, soup):
+    div_result = soup.find_all('div')
+    result = [item.text for item in div_result]
+    txt_writer(file_name, result)
     return
-
-
-def find_href(soup):
-    pass
 
 
 def txt_writer(file_name, result):
@@ -73,7 +62,7 @@ def txt_writer(file_name, result):
     file_name += '.txt'
 
     try:
-        with open(path + os.sep + file_name, mode='w', encoding='utf-8') \
+        with open(path + os.sep + file_name, mode='a', encoding='utf-8') \
                 as txt_file:
             for item in result:
                 txt_file.writelines(' ' + item)
@@ -84,15 +73,35 @@ def txt_writer(file_name, result):
 
 def main(file_name, url):
     soup = boilsoup(url)
+
     find_title(file_name, soup)
     find_h1(file_name, soup)
     find_h2(file_name, soup)
     find_strong(file_name, soup)
     find_em(file_name, soup)
-
-    find_keywords(file_name, soup)
+    find_div(file_name, soup)
+    print('X')
 
 
 if __name__ == '__main__':
-    main('na_luka', 'https://www.naluka.cz')
-    main('pereny_org', 'https://pereny.org')
+
+    main('result', 'https://www.naluka.cz')
+
+    main('result', 'http://www.petr-klic.cz/realizace_zahrad.php')
+
+    main('result', 'https://www.zcjh.cz')
+
+    main('result', 'https://www.realizujemezahrady.cz/realizace-zahrad/')
+
+    main('result', 'http://www.zahradni-realizace.cz')
+
+    main('result', 'http://www.bartl.cz')
+
+    main('result', 'https://neragreen.cz/o-nas/')
+
+    main('result', 'https://zahrada-art.cz/realizace-zahrad')
+
+    main('result',
+         'https://realizace-zahrad-navrhy.cz/sluzby/zahrady-na-miru/')
+
+    main('result', 'https://www.zahradni-specialista.cz')
